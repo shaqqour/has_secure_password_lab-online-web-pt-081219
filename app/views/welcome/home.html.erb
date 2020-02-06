@@ -1,0 +1,7 @@
+<% if flash[:notice] %>
+    <h4><%= flash[:notice] %></h4>
+<% end %>
+<h1>Hi, <%= @user.name %></h1>
+<%= form_for @user, url: logout_path, method: :post do |f| %>
+    <%= f.submit "Log out" %>
+<% end %>
