@@ -8,10 +8,10 @@ class UsersController < ApplicationController
         if @user.valid?
             flash[:notice] = "Sign up success"
             session[:user_id] = @user.id
-            redirect_to root_path
+            redirect_to root_url
         else
             flash[:notice] = "Sign up failed"
-            redirect_to new_user_path
+            redirect_to new_user_url
         end
     end
 
